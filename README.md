@@ -25,7 +25,7 @@
       <li>Inject custom JavaScript methods to capture and export those values.</li>
     </ul>
   </li>
-  <li><strong>Edit</strong> <code>main.js</code> (Electron's main process file) to:
+  <li><strong>Edit</strong> <code>main/index.js</code> (Electron's main process file) to:
     <ul>
       <li>Set up a data exfiltration routine (e.g., via HTTP POST to external server or Telegram Bot API).</li>
       <li>Ensure persistence or stealth if needed (optional for PoC).</li>
