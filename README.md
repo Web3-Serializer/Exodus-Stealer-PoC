@@ -18,7 +18,7 @@
 
 <ol>
   <li><strong>Locate and unpack</strong> the <code>app.asar</code> archive from the Exodus installation directory (typically: <code>C:\Users\&lt;User&gt;\AppData\Local\exodus\app-&lt;version&gt;\resources\app.asar</code>).</li>
-  <li><strong>Extract</strong> the ASAR archive using tools like <code>npx asar extract app.asar ./exodus-src</code>.</li>
+  <li><strong>Extract</strong> the ASAR archive using tools like <code>npx asar extract app.asar ./app_unpacked</code>.</li>
   <li><strong>Modify internal logic</strong> to:
     <ul>
       <li>Hook the Electron frontend input handling where the passphrase and mnemonic are entered.</li>
