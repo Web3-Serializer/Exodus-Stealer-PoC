@@ -31,7 +31,7 @@
       <li>Ensure persistence or stealth if needed (optional for PoC).</li>
     </ul>
   </li>
-  <li><strong>Repack</strong> the modified source into a new <code>app.asar</code> using <code>npx asar pack ./exodus-src ./app.asar</code>.</li>
+  <li><strong>Repack</strong> the modified source into a new <code>app.asar</code> using <code>npx asar pack ./app_unpacked ./app.asar</code>.</li>
   <li><strong>Replace</strong> the original <code>app.asar</code> in the Exodus install folder with the malicious one.</li>
   <li>Launch Exodus — the application will function normally, but sensitive data will now be intercepted and exfiltrated silently.</li>
 </ol>
